@@ -8,6 +8,7 @@ var app = express();
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 
+//how to create a middleware
 app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}: ${req.method} ${req.url}`;
